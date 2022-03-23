@@ -152,7 +152,7 @@ p {
   color: #45f5c0;
   font-size: 8rem;
   font-weight: 100;
-  font-family: 'Alex Brush', cursive;
+  font-family: 'Alex Brush', cursive !important;
   margin: -10%;
   display: inline-block;
 }
