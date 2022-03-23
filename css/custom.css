@@ -9,17 +9,25 @@ body {
           box-sizing: border-box;
 }
 h2 {
-  font-size: 3.2rem;
+  font-size: 2.6rem;
   line-height: 3rem;
-  font-family: 'Line Awesome Free';
+  font-family: 'Libre Baskerville', serif !important;
   font-weight: 200;
   text-transform: uppercase;
 }
 @media only screen and (max-width: 769px) {
   h2 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     line-height: 2rem;
+    font-weight: bold;
   }
+}
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: 'Playfair Display', serif !important;
 }
 .h2-top-txt {
   padding-bottom: 2.5rem;
@@ -418,6 +426,11 @@ h2 {
   height: 85vh;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media only screen and (max-width: 480px) {
+  .carrousel-img img {
+    height: 40vh;
+  }
 }
 .price .price-table {
   text-align: center;
