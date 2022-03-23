@@ -454,6 +454,24 @@ p {
     margin: 0rem;
   }
 }
+@media only screen and (max-width: 480px) {
+  .premium-amenites .amen-card .d-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .premium-amenites .amen-card .txt {
+    margin-top: 1rem;
+  }
+}
 .premium-amenites .amen {
   background-color: #38ffc329;
   border: none;
