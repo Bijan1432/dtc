@@ -124,6 +124,11 @@ p {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(74%, rgba(255, 255, 255, 0)), to(#055782)), url("../img/banner2.jpeg") center / cover;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 74%, #055782 100%), url("../img/banner2.jpeg") center / cover;
 }
+@media only screen and (max-width: 480px) {
+  .banner {
+    height: 70vh;
+  }
+}
 .banner .nav-bar-custom a {
   color: #fff;
 }
