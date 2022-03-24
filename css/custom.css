@@ -151,7 +151,6 @@ span {
   font-size: 5rem;
   font-family: 'Playfair Display', serif;
   font-weight: 400;
-  padding-top: 10%;
   line-height: 70px;
 }
 @media only screen and (max-width: 769px) {
@@ -168,6 +167,7 @@ span {
   }
 }
 .banner .cursive-text {
+  padding-top: 10%;
   color: #45f5c0;
   font-size: 6rem;
   font-weight: 100;
@@ -658,7 +658,8 @@ span {
   padding: 12px;
 }
 .enquire-modal .form input,
-.enquire-modal .form textarea {
+.enquire-modal .form textarea,
+.enquire-modal .form select {
   border: none;
   border-bottom: 2px solid #00885f;
   border-radius: inherit;
@@ -814,7 +815,8 @@ span {
           box-shadow: none;
 }
 .contact .form input,
-.contact .form textarea {
+.contact .form textarea,
+.contact .form select {
   border: none;
   border-bottom: 2px solid #00885f;
   border-radius: inherit;
