@@ -35,19 +35,19 @@
 
 <body>
 
-    
 
-  <!-- Preloader start -->
-   <section class="preload">
-    <div id="preloader">
-      <div id="ctn-preloader" class="ctn-preloader">
-        <div class="animation-preloader text-center">
-          <!-- <div class="spinner">
+
+    <!-- Preloader start -->
+    <section class="preload">
+        <div id="preloader">
+            <div id="ctn-preloader" class="ctn-preloader">
+                <div class="animation-preloader text-center">
+                    <!-- <div class="spinner">
             <img src="img/loader.png" class="img-fluid" alt="">
           </div> -->
-          <img src="img/dtc-southern-heights-logo2.png" alt=""> 
-          <div class="d-flex mt-4">
-            <!-- <div class="txt-loading me-md-5">
+                    <img src="img/dtc-southern-heights-logo2.png" alt="">
+                    <div class="d-flex mt-4">
+                        <!-- <div class="txt-loading me-md-5">
               <span data-text-preloader="S" class="letters-loading">
                D
               </span>
@@ -76,63 +76,63 @@
                 T
               </span>
             </div> -->
-            <br>
-            <div class="txt-loading">
-              <span data-text-preloader="L" class="letters-loading">
-                L
-              </span>
+                        <br>
+                        <div class="txt-loading">
+                            <span data-text-preloader="L" class="letters-loading">
+                                L
+                            </span>
 
-              <span data-text-preloader="O" class="letters-loading">
-                O
-              </span>
+                            <span data-text-preloader="O" class="letters-loading">
+                                O
+                            </span>
 
-              <span data-text-preloader="A" class="letters-loading">
-                A
-              </span>
+                            <span data-text-preloader="A" class="letters-loading">
+                                A
+                            </span>
 
-              <span data-text-preloader="D" class="letters-loading">
-                D
-              </span>
+                            <span data-text-preloader="D" class="letters-loading">
+                                D
+                            </span>
 
-              <span data-text-preloader="I" class="letters-loading">
-                I
-              </span>
+                            <span data-text-preloader="I" class="letters-loading">
+                                I
+                            </span>
 
-              <span data-text-preloader="N" class="letters-loading">
-                N
-              </span>
+                            <span data-text-preloader="N" class="letters-loading">
+                                N
+                            </span>
 
-              <span data-text-preloader="G" class="letters-loading">
-                G
-              </span>
-              <span data-text-preloader="." class="letters-loading">
-                .
-              </span>
-              <span data-text-preloader="." class="letters-loading">
-                .
-              </span>
-              <span data-text-preloader="." class="letters-loading">
-                .
-              </span>
-              <span data-text-preloader="." class="letters-loading">
-                .
-              </span>
-              <span data-text-preloader="." class="letters-loading">
-                .
-              </span>
-              <span data-text-preloader="." class="letters-loading">
-                .
-              </span>
+                            <span data-text-preloader="G" class="letters-loading">
+                                G
+                            </span>
+                            <span data-text-preloader="." class="letters-loading">
+                                .
+                            </span>
+                            <span data-text-preloader="." class="letters-loading">
+                                .
+                            </span>
+                            <span data-text-preloader="." class="letters-loading">
+                                .
+                            </span>
+                            <span data-text-preloader="." class="letters-loading">
+                                .
+                            </span>
+                            <span data-text-preloader="." class="letters-loading">
+                                .
+                            </span>
+                            <span data-text-preloader="." class="letters-loading">
+                                .
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="loader-section section-left"></div>
+                <div class="loader-section section-right"></div>
             </div>
-          </div> 
-
-         </div>
-
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
-      </div>
-    </div>
-  </section>
+        </div>
+    </section>
 
 
 
@@ -154,7 +154,7 @@
 
             <nav class="navbar navbar-expand-md fixed-top " aria-label="e">
                 <div class="container">
-                    <a class="navbar-brand d-block d-md-none " href="index.html"> <img class="bi me-2 logo" width="100"
+                    <a class="navbar-brand d-block d-md-none " href="#"> <img class="bi me-2 logo" width="100"
                             height="auto" src="img/dtc-southern-heights-logo2.png">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -164,7 +164,7 @@
                     </button>
 
                     <div class="collapse navbar-collapse justify-content-md-between" id="navbarsExample04">
-                        <a href="index.html"
+                        <a href="/"
                             class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
                             <img class="bi me-2 logo d-none d-sm-block" width="100" height="auto"
                                 src="img/dtc-southern-heights-logo2.png">
@@ -219,7 +219,8 @@
                     <h4 class="cursive-text" data-aos="fade-up" data-aos-once="true" data-aos-delay="100">Welcome to
                     </h4>
                     <h1 class="big-heading" data-aos="fade-up" data-aos-once="true" data-aos-delay="100">DTC SOUTHERN
-                        <br> HEIGHTS</h1>
+                        <br> HEIGHTS
+                    </h1>
                 </div>
             </div>
             <div class="row justify-content-center ">
@@ -2014,32 +2015,35 @@
     <!-- ====================navbar close on click========================= -->
     <script>
 
+        var mq = window.matchMedia("(max-width: 570px)");
+        if (mq.matches) {
+            // window width is at less than 570px
+            const navLinks = document.querySelectorAll('.nav-link')
+            const menuToggle = document.getElementById('navbarsExample04')
+            const bsCollapse = new bootstrap.Collapse(menuToggle, { toggle: false })
+            navLinks.forEach((l) => {
+                l.addEventListener('click', () => { bsCollapse.toggle() })
+            })
 
-        const navLinks = document.querySelectorAll('.nav-link')
-        const menuToggle = document.getElementById('navbarsExample04')
-        const bsCollapse = new bootstrap.Collapse(menuToggle, { toggle: false })
-        navLinks.forEach((l) => {
-            l.addEventListener('click', () => { bsCollapse.toggle() })
-        })
-
+        }
     </script>
     <script>
 
-        $(document).ready(function() {
-          
-          setTimeout(function() {
-            $('#ctn-preloader').addClass('loaded');
-            $('body').removeClass('no-scroll-y');
-        
-            if ($('#ctn-preloader').hasClass('loaded')) {
-              $('#preloader').delay(1000).queue(function() {
-                $(this).remove();
-              });
-            }
-          }, 2000);
-          
+        $(document).ready(function () {
+
+            setTimeout(function () {
+                $('#ctn-preloader').addClass('loaded');
+                $('body').removeClass('no-scroll-y');
+
+                if ($('#ctn-preloader').hasClass('loaded')) {
+                    $('#preloader').delay(1000).queue(function () {
+                        $(this).remove();
+                    });
+                }
+            }, 2000);
+
         });
-        </script>
+    </script>
 </body>
 
 </html>
