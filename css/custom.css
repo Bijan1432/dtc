@@ -2,6 +2,9 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
@@ -29,14 +32,22 @@ h6,
 p {
   font-family: 'Playfair Display', serif !important;
 }
+a,
+button {
+  font-family: 'Playfair Display', serif;
+}
 .h2-top-txt {
-  padding-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
   color: #00885f !important;
   font-size: 16px;
   font-weight: bold;
 }
 .section-gap {
   padding: 8% 0;
+}
+span {
+  font-weight: bold;
+  color: #45f5c0;
 }
 .btn-primary {
   font-size: 16px;
@@ -121,8 +132,8 @@ p {
   height: 105vh;
   width: 100%;
   background: #ffffff;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(74%, rgba(255, 255, 255, 0)), to(#055782)), url("../img/banner2.jpeg") center / cover;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 74%, #055782 100%), url("../img/banner2.jpeg") center / cover;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(74%, rgba(255, 255, 255, 0)), to(#055782)), url("../img/home.jpg") center / cover;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 74%, #055782 100%), url("../img/home.jpg") center / cover;
 }
 @media only screen and (max-width: 480px) {
   .banner {
@@ -132,10 +143,13 @@ p {
 .banner .nav-bar-custom a {
   color: #fff;
 }
+.banner .nav-bar-custom a:hover {
+  color: #45f5c0 !important;
+}
 .banner .big-heading {
   color: #fff;
   font-size: 5rem;
-  font-family: serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 400;
   padding-top: 10%;
   line-height: 70px;
@@ -155,35 +169,45 @@ p {
 }
 .banner .cursive-text {
   color: #45f5c0;
-  font-size: 8rem;
+  font-size: 6rem;
   font-weight: 100;
-  font-family: 'Alex Brush', cursive !important;
-  margin: -10%;
+  font-family: 'Kristi', cursive !important;
   display: inline-block;
 }
 @media only screen and (max-width: 769px) {
   .banner .cursive-text {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 }
 @media only screen and (max-width: 480px) {
   .banner .cursive-text {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 .banner .down-arrow {
-  margin-top: 10rem;
+  margin-top: 3rem;
   color: #fff;
   font-size: 2.5rem;
+}
+@media only screen and (max-width: 480px) {
+  .banner .down-arrow {
+    font-size: 1.5rem;
+    margin-top: 4rem;
+  }
+}
+.la-bars {
+  margin-top: 12px !important;
 }
 .fixed-nav {
   background-color: #fff;
   -webkit-transition: all 0.5;
   transition: all 0.5;
-  padding: 0 !important;
 }
 .fixed-nav .nav-link {
   color: #000 !important;
+}
+.fixed-nav .nav-link:hover {
+  color: #00885f !important;
 }
 .fixed-nav .diagonal:after {
   background-color: #000;
@@ -210,6 +234,9 @@ p {
   }
   .navbar-collapse .nav-link {
     color: #000 !important;
+  }
+  .navbar-collapse .nav-link:hover {
+    color: #00885f !important;
   }
   .navbar-collapse .diagonal:after {
     background-color: #000;
@@ -266,6 +293,13 @@ p {
     margin: 0 0 0 2%;
   }
 }
+@media only screen and (max-width: 390px) {
+  .about .about-img img {
+    width: 200px;
+    height: 279px;
+    margin-left: auto !important;
+  }
+}
 @media only screen and (max-width: 480px) {
   .about .about-img img {
     -webkit-transform: rotate(0deg);
@@ -318,13 +352,13 @@ p {
   text-align: center;
 }
 .about .value-card h4 {
-  font-size: 3.5rem;
-  color: #fff;
-  font-family: 'Line Awesome Free';
+  font-size: 3rem;
+  color: #45f5c0;
+  font-family: 'Line Awesome Free' !important;
 }
 @media only screen and (max-width: 769px) {
   .about .value-card h4 {
-    font-size: 2.8rem;
+    font-size: 2.3rem;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -340,7 +374,9 @@ p {
   padding-bottom: 0.5rem;
 }
 .amenities img {
-  height: 150px;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   margin-bottom: 2rem;
 }
@@ -367,6 +403,7 @@ p {
 }
 .floor-plan h4 {
   font-weight: bold;
+  font-family: arial !important;
 }
 .floor-plan .tab-img {
   padding: 2rem 5rem;
@@ -397,6 +434,7 @@ p {
           box-sizing: border-box;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  font-family: sans-serif !important;
 }
 .floor-plan .tab-btn.active {
   color: #00885f;
@@ -409,6 +447,22 @@ p {
 }
 .floor-plan .tab-table td {
   text-align: right;
+}
+.floor-plan tbody tr th {
+  font-weight: 500;
+}
+.floor-plan tbody .price-tr {
+  border-color: transparent;
+}
+.floor-plan tbody .price-tr th {
+  font-weight: bold;
+  font-size: 18px;
+  color: #00885f;
+}
+.floor-plan tbody .price-tr td {
+  font-weight: bold;
+  font-size: 24px;
+  color: #e20000;
 }
 .floor-plan .tab-buttons {
   display: -webkit-box;
@@ -425,6 +479,11 @@ p {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+@media only screen and (max-width: 736px) {
+  .floor-plan .nav-item {
+    white-space: nowrap;
+  }
 }
 .carrousel-img img {
   width: 100%;
@@ -772,11 +831,17 @@ p {
 }
 .footer {
   background-color: #0e577e;
+  padding-top: 3rem;
+}
+.footer img {
+  max-width: 114px;
+  margin-bottom: 1rem;
 }
 .footer h3 {
   color: #45f5c0;
   margin: 0;
   font-size: 18px;
+  margin-bottom: 0.7rem;
 }
 .footer p {
   color: #fff;
@@ -788,6 +853,11 @@ p {
 .footer .footer-menu ul li a {
   color: #fff;
   text-decoration: none;
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  font-family: sans-serif;
 }
 .footer .line-foo {
   margin: 1rem 0;
@@ -801,4 +871,46 @@ p {
 .footer .copy a {
   color: #fff;
   text-decoration: none;
+}
+.call-btn {
+  position: sticky;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+}
+.call-btn a {
+  color: #fff;
+  text-decoration: none;
+  font-family: sans-serif;
+  position: relative;
+  font-size: 18px;
+}
+.call-btn a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -2rem;
+  height: 100%;
+  width: 40px;
+  -webkit-transform: skew(-20deg);
+          transform: skew(-20deg);
+  background-color: #00885f;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.call-btn a:hover::after {
+  background-color: #5c636a;
+}
+.location-gmap {
+  padding-bottom: 10px;
+}
+.location-gmap .iframe-map {
+  height: 70vh;
+  width: 100%;
+}
+@media only screen and (max-width: 480px) {
+  .location-gmap .iframe-map {
+    height: 50vh;
+  }
 }
