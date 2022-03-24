@@ -1847,6 +1847,19 @@
 	});
 });
     </script>
+
+    <!-- ====================navbar close on click========================= -->
+    <script>
+
+
+        const navLinks = document.querySelectorAll('.nav-link')
+        const menuToggle = document.getElementById('navbarsExample04')
+        const bsCollapse = new bootstrap.Collapse(menuToggle, { toggle: false })
+        navLinks.forEach((l) => {
+            l.addEventListener('click', () => { bsCollapse.toggle() })
+        })
+
+    </script>
 </body>
 
 </html>
