@@ -454,16 +454,6 @@ span {
 .floor-plan tbody .price-tr {
   border-color: transparent;
 }
-.floor-plan tbody .price-tr th {
-  font-weight: bold;
-  font-size: 18px;
-  color: #00885f;
-}
-.floor-plan tbody .price-tr td {
-  font-weight: bold;
-  font-size: 24px;
-  color: #e20000;
-}
 .floor-plan .tab-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -593,6 +583,7 @@ span {
   width: 1.3em;
   /* same as padding-left set on li */
   color: #45f5c0;
+  margin-right: 1rem;
 }
 .map .map-li h5 {
   font-size: 18px;
@@ -880,6 +871,12 @@ span {
   right: 0;
   z-index: 999;
 }
+.call-btn .what {
+  padding-right: 2px;
+}
+.call-btn i {
+  font-size: 22px;
+}
 .call-btn a {
   color: #fff;
   text-decoration: none;
@@ -887,13 +884,16 @@ span {
   position: relative;
   font-size: 18px;
 }
-.call-btn a::after {
+.call-btn a .la-whatsapp {
+  font-size: 22px;
+}
+.call-btn a .la-whatsapp::after {
   content: "";
   position: absolute;
   top: 0;
-  left: -2rem;
+  left: -1rem;
   height: 100%;
-  width: 40px;
+  width: 200%;
   -webkit-transform: skew(-20deg);
           transform: skew(-20deg);
   background-color: #00885f;
@@ -901,7 +901,7 @@ span {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.call-btn a:hover::after {
+.call-btn a:hover .la-whatsapp::after {
   background-color: #5c636a;
 }
 .location-gmap {
