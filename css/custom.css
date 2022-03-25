@@ -374,7 +374,7 @@ span {
   padding-bottom: 0.5rem;
 }
 .amenities img {
-  height: 180px;
+  height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -886,6 +886,7 @@ span {
 }
 .call-btn a .la-whatsapp {
   font-size: 22px;
+  margin-right: 1rem;
 }
 .call-btn a .la-whatsapp::after {
   content: "";
