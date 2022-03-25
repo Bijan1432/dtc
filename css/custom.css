@@ -49,6 +49,12 @@ span {
   font-weight: bold;
   color: #45f5c0;
 }
+.m-3b {
+  margin-bottom: -3px;
+}
+.m-3t {
+  margin-top: -3px;
+}
 .btn-primary {
   font-size: 16px;
   padding: 8px 60px;
